@@ -1,37 +1,42 @@
 package exercise2;
 import java.util.Objects;
 
-
 public class NationalContact implements Contacts{
     String name = "";
     String surName = "";
     String secondSurName = "";
     String phoneNumber = "";
+    Address address = null;
 
-    public NationalContact( String name, String surName, String secondSurName,String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public NationalContact( String name, String surName, String secondSurName) {
         this.name = Objects.requireNonNull(name);
         this.surName = Objects.requireNonNull(surName);
         this.secondSurName = Objects.requireNonNull(secondSurName);
     }
 
     @Override
-    public void storeContact() {
+    public void setPhoneNumber(String phoneNumber) {
+        String phoneNumberAux =  Objects.requireNonNull(phoneNumber);
+        if(!validatePhoneNumber(phoneNumberAux).equalsIgnoreCase("error")){
+            this.phoneNumber =phoneNumberAux;
+        }else{
+            throw new RuntimeException("The phone number " + phoneNumber + " is incorrect");
+        }
 
     }
 
     @Override
-    public void storePhoneNumber() {
+    public boolean validatePhoneNumber() {
+        return false;
+    }
+
+    @Override
+    public void setAddress() {
 
     }
 
     @Override
-    public void storeAddress() {
-
-    }
-
-    @Override
-    public void getContact() {
+    public void getContactName() {
 
     }
 
@@ -61,7 +66,7 @@ public class NationalContact implements Contacts{
     }
 
     @Override
-    public void updateContact() {
+    public void updateContactName() {
 
     }
 
@@ -75,25 +80,24 @@ public class NationalContact implements Contacts{
 
     }
 
-    @Override
-    public boolean validatePhoneNumber() {
-        boolean  error = false;
 
-        phoneNumber = phoneNumber.replace("-","");
+    public String validatePhoneNumber(String phoneNumberAux) {
 
-        if(phoneNumber.length() != 9) {
-            error = true;
+        phoneNumberAux = phoneNumberAux.replace("-","");
+
+        if(phoneNumberAux.length() != 9) {
+            return "Error";
         }
 
-        if(!phoneNumber.startsWith("9")){
-            error = true;
+        if(!phoneNumberAux.startsWith("9")){
+            return "Error";
         }
 
-        if(phoneNumber.matches("/\\D+/")){
-            error = true;
+        if(phoneNumberAux.matches("/\\D+/")){
+            return "Error";
         }
 
-        return error;
+        return phoneNumberAux;
     }
 
 }
