@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 public class SingletonUndo {
     private static SingletonUndo instance;
 
-    private LinkedList<String> commands = new LinkedList<String>();
+    private final LinkedList<String> commands = new LinkedList<>();
 
     private SingletonUndo() {
     }
