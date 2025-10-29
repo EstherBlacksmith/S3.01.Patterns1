@@ -4,10 +4,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuReading {
+
     private static Scanner inputScanner;
+    private final SingletonUndo singleUndo;
 
     public MenuReading(Scanner scanner) {
-        this.inputScanner = scanner;
+        inputScanner = scanner;
+        singleUndo = SingletonUndo.getInstance();
     }
 
     private static String readString(String question) {
@@ -43,10 +46,10 @@ public class MenuReading {
 
         String question = "Indicates one of the options:\n" +
                 "1. Add a command\n" +
-                "2. Delete a command\n" +
+                "2. Delete last command\n" +
                 "3. List the last commands\n" +
                 "0. Exit";
-        int option = 0;
+        int option;
 
         while (true) {
             option = readInt(question);
@@ -72,14 +75,15 @@ public class MenuReading {
     }
 
     private void deleteCommand() {
-        readString("Name the new command");  System.out.println();
-
+        singleUndo.deleteLastCommand();
     }
 
     private void listCommand() {
+        System.out.println(singleUndo.listCommands());
     }
 
     private void addCommand() {
-        System.out.println("Name the comando to delete");
+        String commandToAdd = readString("Name the new command");
+        singleUndo.addCommand(commandToAdd);
     }
 }
