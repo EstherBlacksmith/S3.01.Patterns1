@@ -1,12 +1,6 @@
 package exercise2;
 
-public interface Contacts {
-    String phoneNumber = "";
+public interface Contacts extends ContactBook {
     String name = "";
     String surName = "";
-    Address address = null;
-
-    void setPhoneNumber(String phoneNumber);
-
-    boolean validatePhoneNumber(String phoneNumber);
 }

@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 public class Main {
 
-    static ContactsManager manager;
+    static ContactsManager contactsManager;
+    static NationalAddressManager addressManager;
     private static Scanner inputScanner;
 
     public static void main(String[] args) {
         inputScanner = new Scanner(System.in);
-        manager = new ContactsManager();
+        contactsManager = new ContactsManager();
+        addressManager = new NationalAddressManager();
         menu();
 
     }
@@ -46,13 +48,13 @@ public class Main {
             option = readInt(question);
             switch (option) {
                 case 1 -> {
-                    manager.createContact();
+                    contactsManager.createContact();
                 }
                 case 2 -> {
-                    manager.deleteContact();
+                    contactsManager.deleteContact();
                 }
                 case 3 -> {
-                    manager.listContact();
+                    contactsManager.listContact();
                 }
                 case 0 -> {
                     return;
