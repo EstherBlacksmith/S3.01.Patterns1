@@ -7,15 +7,6 @@ public interface Contacts {
     Address address = null;
 
     void setPhoneNumber(String phoneNumber);
-    void setAddress();
-    void getContactName();
-    void getPhoneNumber();
-    void getAddress();
-    void deleteContact();
-    void deletePhoneNumber();
-    void deleteAddress();
-    void updateContactName();
-    void updatePhoneNumber();
-    void updateAddress();
-    boolean validatePhoneNumber();
+
+    boolean validatePhoneNumber(String phoneNumber);
 }
