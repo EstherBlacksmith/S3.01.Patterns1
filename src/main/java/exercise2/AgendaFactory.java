@@ -1,6 +1,6 @@
 package exercise2;
 
-public interface Agenda  {
+public interface AgendaFactory {
     Contact createContact();
     PhoneNumber createPhoneNumber();
     Address createAddress();
