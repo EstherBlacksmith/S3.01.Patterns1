@@ -2,7 +2,7 @@ package exercise2;
 
 import java.util.Objects;
 
-public class InternationalContact implements Contact {
+public class InternationalContact implements ContactInterface {
     String name;
     String surname;
 
@@ -20,7 +20,7 @@ public class InternationalContact implements Contact {
     }
 
     @Override
-    public Contact createContact(String name, String surname) {
+    public ContactInterface createContact(String name, String surname) {
         return new InternationalContact(name, surname);
 
     }

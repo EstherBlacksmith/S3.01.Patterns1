@@ -1,8 +1,8 @@
 package exercise2;
 
-public class NationalAddress implements Address {
+public class NationalAddress implements AddressInterface {
     @Override
-    public Address createAddress() {
+    public AddressInterface createAddress() {
         return NationalAddress::new;
     }
 }

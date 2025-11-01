@@ -1,19 +1,19 @@
 package exercise2;
 
-public class InternationalFactory implements AgendaFactory {
+public class InternationalFactory implements AgendaFactoryInterface {
 
     @Override
-    public Contact createContact(String name,String surname) {
+    public ContactInterface createContact(String name, String surname) {
         return new InternationalContact(name,surname);
     }
 
     @Override
-    public PhoneNumber createPhoneNumber() {
+    public PhoneNumberInterface createPhoneNumber() {
         return new InternationalPhoneNumber();
     }
 
     @Override
-    public Address createAddress() {
+    public AddressInterface createAddress() {
         return new InternationalAddress();
     }
 

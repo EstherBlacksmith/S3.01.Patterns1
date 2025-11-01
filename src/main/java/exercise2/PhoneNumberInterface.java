@@ -1,5 +1,5 @@
 package exercise2;
 
-public interface PhoneNumber {
+public interface PhoneNumberInterface {
     void createPhoneNumber();
 }

@@ -1,20 +1,20 @@
 package exercise2;
 
-public class NationalFactory implements AgendaFactory {
+public class NationalFactory implements AgendaFactoryInterface {
 
     @Override
-    public Contact createContact(String name,String surname) {
+    public ContactInterface createContact(String name, String surname) {
         String secondSurname = "";
         return new NationalContact(name,surname,secondSurname);
     }
 
     @Override
-    public PhoneNumber createPhoneNumber() {
+    public PhoneNumberInterface createPhoneNumber() {
         return new NationalPhoneNumber();
     }
 
     @Override
-    public Address createAddress() {
+    public AddressInterface createAddress() {
         return new NationalAddress();
     }
 }
