@@ -1,6 +1,6 @@
 package exercise2;
 
-public class NationalAddress implements Address {
+public class InternationalAddress implements Address{
     @Override
     public void createAddress() {
 
