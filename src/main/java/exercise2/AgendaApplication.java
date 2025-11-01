@@ -1,22 +1,23 @@
 package exercise2;
 
 public class AgendaApplication {
-    private AgendaFactory factory;
-    private Contact contact;
-    private PhoneNumber phoneNumber;
-    private Address address;
+    private AgendaFactoryInterface factory;
 
-    public AgendaApplication(AgendaFactory factory) {
+
+    public AgendaApplication(AgendaFactoryInterface factory) {
         this.factory = factory;
     }
 
-    void createFactory(){
-        this.contact = factory.createContact();
-        this.phoneNumber = factory.createPhoneNumber();
-        this.address = factory.createAddress();
+    ContactInterface createContact(String name, String surname) {
+      return   this.factory.createContact(name,surname);
+
     }
 
-    void createContact(){
-        contact.createContact();
+    AddressInterface createAddress() {
+        return this.factory.createAddress();
+    }
+
+    PhoneNumberInterface createPhoneNumber() {
+        return this.factory.createPhoneNumber();
     }
 }

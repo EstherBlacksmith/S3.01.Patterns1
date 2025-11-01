@@ -1,6 +1,6 @@
 package exercise2;
 
-public class InternationalPhoneNumber implements PhoneNumber {
+public class InternationalPhoneNumber implements PhoneNumberInterface {
     @Override
     public void createPhoneNumber() {
 
