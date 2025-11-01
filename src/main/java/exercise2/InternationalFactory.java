@@ -1,10 +1,10 @@
 package exercise2;
 
-public class InternationalFactory implements AgendaFactory{
+public class InternationalFactory implements AgendaFactory {
 
     @Override
-    public Contact createContact() {
-        return new InternationalContact();
+    public Contact createContact(String name,String surname) {
+        return new InternationalContact(name,surname);
     }
 
     @Override

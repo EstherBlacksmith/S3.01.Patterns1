@@ -3,8 +3,9 @@ package exercise2;
 public class NationalFactory implements AgendaFactory {
 
     @Override
-    public Contact createContact() {
-        return new NationalContact();
+    public Contact createContact(String name,String surname) {
+        String secondSurname = "";
+        return new NationalContact(name,surname,secondSurname);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package exercise2;
 
 public interface Contact {
-    void createContact();
+
+    Contact createContact(String name, String surname);
 
 }
