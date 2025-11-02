@@ -9,6 +9,7 @@ public class InternationalContact implements ContactInterface {
     public InternationalContact(String name,String surname) {
         this.name = Objects.requireNonNull(name);
         this.surname = Objects.requireNonNull(surname);
+
     }
 
     private void setName(String name) {
@@ -23,5 +24,13 @@ public class InternationalContact implements ContactInterface {
     public ContactInterface createContact(String name, String surname) {
         return new InternationalContact(name, surname);
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
     }
 }

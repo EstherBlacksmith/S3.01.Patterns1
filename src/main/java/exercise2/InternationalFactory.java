@@ -4,7 +4,7 @@ public class InternationalFactory implements AgendaFactoryInterface {
 
     @Override
     public ContactInterface createContact(String name, String surname) {
-        return new InternationalContact(name,surname);
+        return new InternationalContact(name, surname);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class InternationalFactory implements AgendaFactoryInterface {
 
     @Override
     public AddressInterface createAddress(String street, String streetNum) {
-        return new InternationalAddress(street,streetNum);
+        return new InternationalAddress(street, streetNum);
     }
 
 }
