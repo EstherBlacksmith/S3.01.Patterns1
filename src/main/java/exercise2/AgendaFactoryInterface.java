@@ -3,7 +3,7 @@ package exercise2;
 public interface AgendaFactoryInterface {
     ContactInterface createContact(String name, String surname);
 
-    PhoneNumberInterface createPhoneNumber();
+    PhoneNumberInterface createPhoneNumber(String phoneNumber);
 
-    AddressInterface createAddress();
+    AddressInterface createAddress(String street, String streetNum);
 }
