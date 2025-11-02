@@ -1,5 +1,5 @@
 package exercise2;
 
 public interface AddressInterface {
-    AddressInterface createAddress();
+    AddressInterface createAddress(String street, String streetNum);
 }

@@ -8,13 +8,13 @@ public class InternationalFactory implements AgendaFactoryInterface {
     }
 
     @Override
-    public PhoneNumberInterface createPhoneNumber() {
-        return new InternationalPhoneNumber();
+    public PhoneNumberInterface createPhoneNumber(String phoneNumber) {
+        return new InternationalPhoneNumber(phoneNumber);
     }
 
     @Override
-    public AddressInterface createAddress() {
-        return new InternationalAddress();
+    public AddressInterface createAddress(String street, String streetNum) {
+        return new InternationalAddress(street,streetNum);
     }
 
 }

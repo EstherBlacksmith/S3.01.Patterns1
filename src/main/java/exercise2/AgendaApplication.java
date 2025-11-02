@@ -9,15 +9,15 @@ public class AgendaApplication {
     }
 
     ContactInterface createContact(String name, String surname) {
-      return   this.factory.createContact(name,surname);
+      return this.factory.createContact(name,surname);
 
     }
 
-    AddressInterface createAddress() {
-        return this.factory.createAddress();
+    AddressInterface createAddress(String street, String streetNum) {
+        return this.factory.createAddress(street,streetNum);
     }
 
-    PhoneNumberInterface createPhoneNumber() {
-        return this.factory.createPhoneNumber();
+    PhoneNumberInterface createPhoneNumber(String phoneNumber) {
+        return this.factory.createPhoneNumber(phoneNumber);
     }
 }

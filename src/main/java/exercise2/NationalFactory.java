@@ -9,12 +9,12 @@ public class NationalFactory implements AgendaFactoryInterface {
     }
 
     @Override
-    public PhoneNumberInterface createPhoneNumber() {
-        return new NationalPhoneNumber();
+    public PhoneNumberInterface createPhoneNumber(String phoneNumber) {
+        return new NationalPhoneNumber(phoneNumber);
     }
 
     @Override
-    public AddressInterface createAddress() {
-        return new NationalAddress();
+    public AddressInterface createAddress(String street, String streetNum) {
+        return new NationalAddress(street, streetNum);
     }
 }

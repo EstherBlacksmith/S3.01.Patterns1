@@ -4,4 +4,5 @@ public interface ContactInterface {
 
     ContactInterface createContact(String name, String surname);
 
+
 }

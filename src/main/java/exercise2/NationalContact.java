@@ -3,14 +3,14 @@ package exercise2;
 import java.util.Objects;
 
 public class NationalContact implements ContactInterface {
-    String name;
-    String firstSurName;
-    String secondSurName;
+    private String name;
+    private String firstSurName;
+    private String secondSurName;
 
     public NationalContact(String name, String surname,String secondSurName) {
         this.name = Objects.requireNonNull(name);
         this.firstSurName = Objects.requireNonNull(surname);
-        this.secondSurName = Objects.requireNonNullElse(secondSurName,"apellido2");
+        this.secondSurName = Objects.requireNonNullElse(secondSurName,"");
     }
 
     @Override
