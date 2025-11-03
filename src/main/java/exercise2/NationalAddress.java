@@ -11,14 +11,14 @@ public class NationalAddress implements AddressInterface {
     private String door;
 
 
-    @Override
-    public AddressInterface createAddress(String street, String streetNum) {
-        return new NationalAddress(street,streetNum);
-    }
-
     public NationalAddress(String street, String streetNum) {
         this.street = Objects.requireNonNull(street);
         this.streetNum = Objects.requireNonNull(streetNum);
+    }
+
+    @Override
+    public AddressInterface createAddress(String street, String streetNum) {
+        return new NationalAddress(street, streetNum);
     }
 
     protected void setStreetType(String streetType) {
@@ -36,7 +36,6 @@ public class NationalAddress implements AddressInterface {
     protected void setStair(String stair) {
         this.stair = stair;
     }
-
 
 
     protected void setDoor(String door) {

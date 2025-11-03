@@ -1,9 +1,5 @@
 package exercise2;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -13,7 +9,7 @@ public class Main {
         NationalContact nationalContact = (NationalContact) nationalAgendaApp.createContact("Fulanita", "de Tal");
         nationalContact.setSecondSurName("i Pascual");
 
-        NationalAddress nationalAddress = (NationalAddress) nationalAgendaApp.createAddress("de les flors","s/n");
+        NationalAddress nationalAddress = (NationalAddress) nationalAgendaApp.createAddress("de les flors", "s/n");
         nationalAddress.setStreetType("Carrer");
         nationalAddress.setFloor("2");
         nationalAddress.setDoor("B");
@@ -26,7 +22,7 @@ public class Main {
         AgendaApplication internationalAgendaApp = new AgendaApplication(internationalAgenda);
 
         InternationalContact internationalContact = (InternationalContact) internationalAgendaApp.createContact("Fulanita", "de Tal");
-        InternationalAddress internationalAddress = (InternationalAddress) internationalAgendaApp.createAddress("de les flors","s/n");
+        InternationalAddress internationalAddress = (InternationalAddress) internationalAgendaApp.createAddress("de les flors", "s/n");
         nationalAddress.setFloor("2");
         nationalAddress.setDoor("B");
 

@@ -1,16 +1,19 @@
 package exercise3;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.junit.Assert.assertTrue;
+
 public class CarTest {
 
+    private final PrintStream originalOut = System.out;
     private Car car;
     private ByteArrayOutputStream outContent;
-    private final PrintStream originalOut = System.out;
 
     @Before
     public void setUp() {

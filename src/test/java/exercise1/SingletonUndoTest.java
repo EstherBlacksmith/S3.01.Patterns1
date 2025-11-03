@@ -2,20 +2,19 @@ package exercise1;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertSame;
 
 public class SingletonUndoTest {
 
     @Test
     public void testGetInstanceAlwaysReturnsTheSameInstance() {
 
-            SingletonUndo instance1 = SingletonUndo.getInstance();
-            SingletonUndo instance2 = SingletonUndo.getInstance();
+        SingletonUndo instance1 = SingletonUndo.getInstance();
+        SingletonUndo instance2 = SingletonUndo.getInstance();
 
-            assertSame("Method 'getInstance()' should always return the same object", instance1, instance2);
+        assertSame("Method 'getInstance()' should always return the same object", instance1, instance2);
 
     }
-
 
 
     @Test
