@@ -1,6 +1,6 @@
 package exercise3;
 
-public class Accelerate implements CommandInterface{
+public class Accelerate implements CommandInterface {
 
     private Vehicle vehicle;
 

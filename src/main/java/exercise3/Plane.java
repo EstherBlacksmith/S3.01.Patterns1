@@ -1,14 +1,14 @@
 package exercise3;
 
-public class Plane implements Vehicle{
+public class Plane implements Vehicle {
     private boolean engineOn;
     private int velocity;
 
     @Override
     public void turnOn() {
-        if (engineOn){
+        if (engineOn) {
             System.out.println("The engine was already on");
-        }else{
+        } else {
             engineOn = true;
             System.out.println("Turning the plane on.\nFiownn!!! ");
         }
@@ -24,12 +24,12 @@ public class Plane implements Vehicle{
 
     @Override
     public void decelerate() {
-        System.out.println("Decelerating!! " );
+        System.out.println("Decelerating!! ");
 
         System.out.println("Current velocity: " + velocity + "mph");
-        if(velocity <= 100){
+        if (velocity <= 100) {
             velocity = 0;
-        }else {
+        } else {
             velocity -= 100;
         }
     }
