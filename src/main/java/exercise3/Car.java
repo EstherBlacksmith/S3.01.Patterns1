@@ -32,4 +32,8 @@ public class Car implements Vehicle {
             velocity -= 10;
         }
     }
+
+    public int getVelocity() {
+        return this.velocity;
+    }
 }
