@@ -41,7 +41,7 @@ public class AgendaFactoryInterfaceTest {
     }
 
     @Test
-    public void testCantCreateNationalContactUsingNationalFactory() {
+    public void testCantCreateInterNationalContactUsingNationalFactory() {
         AgendaApplication app = new AgendaApplication(nationalFactory);
 
         ContactInterface contact = app.createContact("Jonhy", "Walker");
