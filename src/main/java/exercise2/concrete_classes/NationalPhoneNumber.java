@@ -1,4 +1,6 @@
-package exercise2;
+package exercise2.concrete_classes;
+
+import exercise2.interfaces.PhoneNumberInterface;
 
 import java.util.Objects;
 
@@ -10,7 +12,7 @@ public class NationalPhoneNumber implements PhoneNumberInterface {
         this.phoneNumber = Objects.requireNonNull(phoneNumber);
     }
 
-    protected void setPrefixPhoneNumber(String prefixPhoneNumber) {
+    public void setPrefixPhoneNumber(String prefixPhoneNumber) {
         this.prefixPhoneNumber = Objects.requireNonNull(prefixPhoneNumber);
     }
 

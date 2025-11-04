@@ -1,4 +1,6 @@
-package exercise2;
+package exercise2.concrete_classes;
+
+import exercise2.interfaces.ContactInterface;
 
 import java.util.Objects;
 
@@ -26,7 +28,7 @@ public class NationalContact implements ContactInterface {
         this.firstSurName = Objects.requireNonNull(firstSurName);
     }
 
-    protected void setSecondSurName(String secondSurName) {
+    public void setSecondSurName(String secondSurName) {
         this.secondSurName = Objects.requireNonNull(secondSurName);
     }
 }

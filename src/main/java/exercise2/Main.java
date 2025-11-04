@@ -1,5 +1,10 @@
 package exercise2;
 
+import exercise2.concrete_classes.*;
+import exercise2.factories.InternationalFactory;
+import exercise2.factories.NationalFactory;
+import exercise2.interfaces.AgendaFactoryInterface;
+
 public class Main {
     public static void main(String[] args) {
 

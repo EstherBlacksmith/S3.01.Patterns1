@@ -1,4 +1,6 @@
-package exercise2;
+package exercise2.concrete_classes;
+
+import exercise2.interfaces.ContactInterface;
 
 import java.util.Objects;
 

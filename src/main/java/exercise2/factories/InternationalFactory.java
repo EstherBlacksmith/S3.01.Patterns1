@@ -1,4 +1,12 @@
-package exercise2;
+package exercise2.factories;
+
+import exercise2.interfaces.AddressInterface;
+import exercise2.interfaces.AgendaFactoryInterface;
+import exercise2.interfaces.ContactInterface;
+import exercise2.interfaces.PhoneNumberInterface;
+import exercise2.concrete_classes.InternationalAddress;
+import exercise2.concrete_classes.InternationalContact;
+import exercise2.concrete_classes.InternationalPhoneNumber;
 
 public class InternationalFactory implements AgendaFactoryInterface {
 

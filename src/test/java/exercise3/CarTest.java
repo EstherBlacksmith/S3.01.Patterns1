@@ -1,5 +1,6 @@
 package exercise3;
 
+import exercise3.concrete_classes.Car;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

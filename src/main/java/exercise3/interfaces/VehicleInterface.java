@@ -1,6 +1,6 @@
-package exercise3;
+package exercise3.interfaces;
 
-public interface Vehicle {
+public interface VehicleInterface {
 
     void turnOn();
 

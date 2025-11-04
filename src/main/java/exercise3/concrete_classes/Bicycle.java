@@ -1,6 +1,8 @@
-package exercise3;
+package exercise3.concrete_classes;
 
-public class Car implements Vehicle {
+import exercise3.interfaces.VehicleInterface;
+
+public class Bicycle implements VehicleInterface {
     private int velocity;
     private boolean engineOn;
 
@@ -10,7 +12,7 @@ public class Car implements Vehicle {
             System.out.println("The engine was already on");
         } else {
             engineOn = true;
-            System.out.println("Turning the car on.\nBrom Brom!! ");
+            System.out.println("Turning the bicycle on.\n Start pedaling!!!");
         }
     }
 
@@ -18,7 +20,7 @@ public class Car implements Vehicle {
     public void accelerate() {
         System.out.println("Accelerating!!");
         System.out.println("Current velocity: " + velocity + "km/h");
-        velocity += 10;
+        velocity += 5;
     }
 
     @Override
@@ -26,14 +28,10 @@ public class Car implements Vehicle {
         System.out.println("Decelerating!! ");
 
         System.out.println("Current velocity: " + velocity + "km/h");
-        if (velocity <= 10) {
+        if (velocity <= 5) {
             velocity = 0;
         } else {
-            velocity -= 10;
+            velocity -= 5;
         }
-    }
-
-    public int getVelocity() {
-        return this.velocity;
     }
 }

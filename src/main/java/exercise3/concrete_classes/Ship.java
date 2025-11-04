@@ -1,6 +1,8 @@
-package exercise3;
+package exercise3.concrete_classes;
 
-public class Ship implements Vehicle {
+import exercise3.interfaces.VehicleInterface;
+
+public class Ship implements VehicleInterface {
     private int velocity;
     private boolean engineOn;
 

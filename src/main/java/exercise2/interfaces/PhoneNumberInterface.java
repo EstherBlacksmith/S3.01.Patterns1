@@ -1,4 +1,4 @@
-package exercise2;
+package exercise2.interfaces;
 
 public interface PhoneNumberInterface {
     PhoneNumberInterface createPhoneNumber(String phoneNumber);

@@ -1,4 +1,6 @@
-package exercise2;
+package exercise2.concrete_classes;
+
+import exercise2.interfaces.AddressInterface;
 
 import java.util.Objects;
 
@@ -21,7 +23,7 @@ public class NationalAddress implements AddressInterface {
         return new NationalAddress(street, streetNum);
     }
 
-    protected void setStreetType(String streetType) {
+    public void setStreetType(String streetType) {
         this.streetType = streetType;
     }
 
@@ -29,7 +31,7 @@ public class NationalAddress implements AddressInterface {
         this.streetNum = streetNum;
     }
 
-    protected void setFloor(String floor) {
+    public void setFloor(String floor) {
         this.floor = floor;
     }
 
@@ -38,7 +40,7 @@ public class NationalAddress implements AddressInterface {
     }
 
 
-    protected void setDoor(String door) {
+    public void setDoor(String door) {
         this.door = door;
     }
 }

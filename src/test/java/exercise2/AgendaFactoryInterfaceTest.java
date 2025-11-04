@@ -1,5 +1,11 @@
 package exercise2;
 
+import exercise2.concrete_classes.InternationalContact;
+import exercise2.concrete_classes.NationalContact;
+import exercise2.factories.InternationalFactory;
+import exercise2.factories.NationalFactory;
+import exercise2.interfaces.AgendaFactoryInterface;
+import exercise2.interfaces.ContactInterface;
 import org.junit.Before;
 import org.junit.Test;
 

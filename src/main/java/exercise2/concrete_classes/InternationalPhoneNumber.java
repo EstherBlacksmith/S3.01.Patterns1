@@ -1,4 +1,6 @@
-package exercise2;
+package exercise2.concrete_classes;
+
+import exercise2.interfaces.PhoneNumberInterface;
 
 import java.util.Objects;
 

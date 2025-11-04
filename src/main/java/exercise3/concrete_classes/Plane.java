@@ -1,6 +1,8 @@
-package exercise3;
+package exercise3.concrete_classes;
 
-public class Plane implements Vehicle {
+import exercise3.interfaces.VehicleInterface;
+
+public class Plane implements VehicleInterface {
     private boolean engineOn;
     private int velocity;
 
