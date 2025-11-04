@@ -7,15 +7,15 @@ public class NationalContact implements ContactInterface {
     private String firstSurName;
     private String secondSurName;
 
-    public NationalContact(String name, String surname,String secondSurName) {
+    public NationalContact(String name, String surname, String secondSurName) {
         this.name = Objects.requireNonNull(name);
         this.firstSurName = Objects.requireNonNull(surname);
-        this.secondSurName = Objects.requireNonNullElse(secondSurName,"");
+        this.secondSurName = Objects.requireNonNullElse(secondSurName, "");
     }
 
     @Override
     public ContactInterface createContact(String name, String firstSurName) {
-        return  new NationalContact(name,firstSurName,secondSurName);
+        return new NationalContact(name, firstSurName, secondSurName);
     }
 
     protected void setName(String name) {

@@ -5,7 +5,7 @@ public class NationalFactory implements AgendaFactoryInterface {
     @Override
     public ContactInterface createContact(String name, String surname) {
         String secondSurname = "";
-        return new NationalContact(name,surname,secondSurname);
+        return new NationalContact(name, surname, secondSurname);
     }
 
     @Override

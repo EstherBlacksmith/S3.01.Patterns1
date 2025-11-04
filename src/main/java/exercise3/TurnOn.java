@@ -1,6 +1,6 @@
 package exercise3;
 
-public class TurnOn implements CommandInterface{
+public class TurnOn implements CommandInterface {
 
     private Vehicle vehicle;
 

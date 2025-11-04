@@ -8,12 +8,12 @@ public class AgendaApplication {
     }
 
     ContactInterface createContact(String name, String surname) {
-      return this.factory.createContact(name,surname);
+        return this.factory.createContact(name, surname);
 
     }
 
     AddressInterface createAddress(String street, String streetNum) {
-        return this.factory.createAddress(street,streetNum);
+        return this.factory.createAddress(street, streetNum);
     }
 
     PhoneNumberInterface createPhoneNumber(String phoneNumber) {

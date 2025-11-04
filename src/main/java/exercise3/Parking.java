@@ -3,8 +3,12 @@ package exercise3;
 public class Parking {
     private CommandInterface command;
 
-    public void setCommand(CommandInterface command){
+    public void setCommand(CommandInterface command) {
         this.command = command;
+    }
+
+    public void drive() {
+        command.execute();
     }
 
 }
